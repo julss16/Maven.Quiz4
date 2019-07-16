@@ -5,15 +5,29 @@ package rocks.zipcode.quiz4.fundamentals;
  */
 public class StringUtils {
     public static Character getMiddleCharacter(String string) {
-        return null;
+        char[] characters= string.toCharArray();
+
+        return characters[(characters.length)/2];
     }
 
     public static String capitalizeMiddleCharacter(String str) {
-        return null;
+
+        char[] characters= str.toCharArray();
+
+        characters[(characters.length)/2]= Character.toUpperCase(characters[(characters.length)/2]);
+        String string= new String(characters);
+
+        return string;
     }
 
     public static String lowerCaseMiddleCharacter(String str) {
-        return null;
+
+        char[] characters= str.toCharArray();
+
+        characters[(characters.length)/2]= Character.toLowerCase(characters[(characters.length)/2]);
+        String string= new String(characters);
+
+        return string;
     }
 
     public static Boolean isIsogram(String str) {
@@ -21,6 +35,8 @@ public class StringUtils {
     }
 
     public static Boolean hasDuplicateConsecutiveCharacters(String str) {
+
+
         return null;
     }
 
