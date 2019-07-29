@@ -39,7 +39,7 @@ public class SetBankAccountTest {
 
 
     @Test
-    public void tes4() {
+    public void test4() {
         test(20.0);
     }
 

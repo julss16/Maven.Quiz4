@@ -1,5 +1,9 @@
 package rocks.zipcode.quiz4.fundamentals;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.*;
+
 /**
  * @author leon on 21/12/2018.
  */
@@ -31,20 +35,56 @@ public class StringUtils {
     }
 
     public static Boolean isIsogram(String str) {
-        return null;
-    }
+        String[] strings= str.split("");
 
-    public static Boolean hasDuplicateConsecutiveCharacters(String str) {
+        Set<String> set= new HashSet<String>(Arrays.asList(strings));
+
+                if (str.length()==set.size()) {
+                    return true;
+                } else {
+                    return false;
+
+                }
+        }
 
 
-        return null;
-    }
+    public static Boolean hasDuplicateConsecutiveCharacters (String str){
+
+        char[] chars = str.toCharArray();
+                    for ( int i = 1; i < chars.length; i++ ) {
+                        if (chars[i] == chars[i - 1] || chars[i] == chars[i + 1]) {
+                            return true;
+                        } else {
+                            return false;
+                        }
+                    }return null;
+
+                }
+
+
 
     public static String removeConsecutiveDuplicateCharacters(String str) {
-        return null;
+        for(int i=0; i< str.length()-1; i++){
+            if(str.charAt(i)==str.charAt(i+1)){
+                str= str.substring(0, i) + str.substring(i+2);
+            }
+        } return str;
     }
 
+
     public static String invertCasing(String str) {
-        return null;
+        char[] chars= str.toCharArray();
+
+        for (int i=0; i < chars.length; i++){
+            char c= chars[i];
+            if(Character.isLowerCase(c)){
+               chars[i]= Character.toUpperCase(c);
+            }else {
+                chars[i]= Character.toLowerCase(c);
+            }
+        }
+            String string= new String(chars);
+
+        return string;
     }
 }

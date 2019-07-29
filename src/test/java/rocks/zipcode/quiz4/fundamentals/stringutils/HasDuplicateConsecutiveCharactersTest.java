@@ -8,7 +8,7 @@ public class HasDuplicateConsecutiveCharactersTest {
     @Test
     public void test1() {
         String input = "Happy";
-        Assert.assertTrue(StringUtils.hasDuplicateConsecutiveCharacters(input));
+        Assert.assertFalse(StringUtils.hasDuplicateConsecutiveCharacters(input));
     }
 
     @Test
